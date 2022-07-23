@@ -1,11 +1,16 @@
-// import react from react;
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import faker from 'faker';
+
+const el = document.getElementById('root');
+const root = ReactDOM.createRoot(el);
 
 const App = () => {
   return (
     <div className='ui container comments'>
       <div className='comment'>
         <a href='/' className='avatar'>
-          <img alt='avatar' />
+          <img alt='avatar' src={faker.image.avatar()} />
         </a>
         <div className='content'>
           <a href='/' className='author'>
@@ -21,4 +26,4 @@ const App = () => {
   );
 };
 
-export default App;
+root.render(<App />);
