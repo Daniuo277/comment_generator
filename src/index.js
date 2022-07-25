@@ -1,8 +1,13 @@
+// Import react
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+// Import falso
 import { randAvatar, randLine } from '@ngneat/falso';
+// Import components
 import CommentDetail from './CommentDetail';
 import ApprovalCard from './ApprovalCard';
+// Import styles
+import './style/App.css';
 
 const el = document.getElementById('root');
 const root = ReactDOM.createRoot(el);
@@ -10,6 +15,10 @@ const root = ReactDOM.createRoot(el);
 const App = () => {
   return (
     <div className='ui container comments'>
+      <ApprovalCard>
+        <h4>Warning!</h4>
+        <div>Are you sure you want to do this?</div>
+      </ApprovalCard>
       <ApprovalCard>
         <CommentDetail
           author='Sam'
